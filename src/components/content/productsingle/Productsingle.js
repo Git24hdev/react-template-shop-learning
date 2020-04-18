@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
+import { withRouter } from "react-router";
 
 class Productsingle extends Component {
+    componentDidMount() {
+        console.log(this.props.match)
+    }
     render() {
         return (
             <div className="col-lg-9">
                 <div className="card mt-4">
                     <img className="card-img-top img-fluid" src="http://placehold.it/900x400" alt="" />
                     <div className="card-body">
-                        <h3 className="card-title">Product Name</h3>
+        <h3 className="card-title">Product id: {this.props.match.params.id}</h3>
                         <h4>$24.99</h4>
                         <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
                         <span className="text-warning">★ ★ ★ ★ ☆</span>
@@ -37,4 +41,4 @@ class Productsingle extends Component {
     }
 }
 
-export default Productsingle;
+export default withRouter(Productsingle); 

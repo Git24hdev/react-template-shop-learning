@@ -13,11 +13,11 @@ class Productitem extends Component {
                     <div className="card-body">
                         <h4 className="card-title">{this.props.children}</h4>
                         <h5>{this.formatNumber(this.props.price)} VNĐ</h5>
-        <p className="card-text">{this.props.desc}</p>
+                        <p className="card-text">{this.props.desc}</p>
                     </div>
                     <div className="card-footer">
                         <small className="text-muted">★ ★ ★ ★ ☆</small>
-                        <button type="button" className="btn btn-success ml-3 mr-3 float-right"><Link to={this.props.url}>Mua ngay</Link></button>
+                        <button type="button" className="btn btn-success ml-3 mr-3 float-right"><Link to={"/san-pham/" + this.props.pid + "/" + this.props.url}>Mua ngay</Link></button>
                     </div>
                 </div>
             </div>
